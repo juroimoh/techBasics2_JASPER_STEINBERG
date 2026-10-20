@@ -64,7 +64,7 @@ void loop() {
 }
 ```
 Resistor Color Codes:  
-<img width="581" src="https://github.com/user-attachments/assets/c3d24317-307f-41e0-b0bd-95a99e57e4c3" />  
+<img width="500" src="https://github.com/user-attachments/assets/c3d24317-307f-41e0-b0bd-95a99e57e4c3" />  
 
 `digitalWrite` is used for LED lights.  
 `analogWrite` is used for RGB lights.  
