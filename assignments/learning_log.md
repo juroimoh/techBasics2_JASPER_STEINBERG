@@ -26,4 +26,9 @@ Current ideas for the final project include joystick controls for my game Dangan
 
 ## XX/10/26 Notes (week 2)
 
+digital write is for LED
+analog write is for RGB
+
+## XX/10/26 Notes (week 3)
+
 scientists reveal the hi
