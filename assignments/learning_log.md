@@ -57,10 +57,6 @@ void loop() {
   digitalWrite(yellowLED, LOW);
   digitalWrite(greenLED, HIGH);
   delay(50);
-  digitalWrite(redLED, HIGH);
-  digitalWrite(yellowLED, LOW);
-  digitalWrite(greenLED, LOW);
-  delay(50);
 }
 ```
 Resistor Color Codes:  
