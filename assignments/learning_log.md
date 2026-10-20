@@ -24,11 +24,11 @@ My Arduino box was missing a USB cable (15) so as of writing this I have swapped
 
 Current ideas for the final project include joystick controls for my game Dangan, a simple screen LED-based movement game, or collaborating with Hendrik to make physical controls for his Tech Basics I game, which has more controls than Dangan.
 
-## XX/10/26 Notes (week 2)
+## 20/10/26 Notes (week 2)
 
 digital write is for LED
 analog write is for RGB
 
-## XX/10/26 Notes (week 3)
+## XX/10/26 Notes (week X)
 
 scientists reveal the hi
