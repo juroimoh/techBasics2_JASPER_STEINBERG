@@ -173,6 +173,11 @@ void loop() {
 ```
 <img width="300" src="https://github.com/user-attachments/assets/a2d7e70f-a9ec-4109-b542-6ef89a582688" />
 
+Detecting light using a photo resistor:
+```
+// code is the same as above, simply reading from the same pins
+```
+<img width="300" src="https://github.com/user-attachments/assets/a943fa89-b5cd-414e-a7e7-057a0ba600c3" />
 
 
 ## XX/10/26 Notes (week X)
