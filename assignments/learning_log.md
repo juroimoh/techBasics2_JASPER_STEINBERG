@@ -95,7 +95,85 @@ void setRGB(int r, int g, int b){
 
 ## 27/10/26 Notes (week 3)
 
-hi
+`analogWrite()` uses PWN pins, allowing for analog signals.  
+- 0 - 255 (0v to 5v)  
+
+Analog signals are **continuous** and vary **smoothly** over time (PWN pin like ~3, not pin 13).  
+Digital signals are **discrete** and are usually represented with binary (0 or 1).  
+
+Demo of the oscilations:  
+```
+void setup() {
+  pinMode(3, OUTPUT);
+}
+
+void loop() {
+  analogWrite(3, 255); // always on (5v)
+  analogWrite(3, 127); // half on, half off
+  analogWrite(3, 50); // sometimes on, mostly off
+  analogWrite(3, 0); // always off (0v)
+}
+```
+
+Blinking LED:  
+```
+const int LED_PIN = 3; // ~ PWM pin (between power values 0-255)
+void setup() {
+  pinMode(LED_PIN, OUTPUT);
+}
+
+void loop() {
+  analogWrite(LED_PIN, 200);
+  delay(300);
+  analogWrite(LED_PIN, 5);
+  delay(300);
+}
+```
+
+Fade in/out an LED:
+```
+const int LED_PIN = 3;
+
+void setup() {
+  pinMode(LED_PIN, OUTPUT);
+}
+
+void loop() {
+  for (int i=0; i <= 255; i += 5) { // (START; END; STEP)
+    analogWrite(LED_PIN, i);
+    delay(15);
+  }
+
+  for (int i=255; i >= 0; i -= 5) {
+    analogWrite(LED_PIN, i);
+    delay(15);
+  }
+}
+```
+
+Fading an LED using a potentiometer:
+```
+const int POT = A0;
+const int LED_PIN = 3;
+int reading = 0;
+int brightness = 0;
+
+void setup() {
+  pinMode(POT, INPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  reading = analogRead(POT);
+  Serial.print("Potentiometer: ");
+  brightness = map(reading, 0, 1023, 0, 255);
+  Serial.println(reading);
+  analogWrite(LED_PIN, brightness);
+}
+```
+<img width="300" src="https://github.com/user-attachments/assets/a2d7e70f-a9ec-4109-b542-6ef89a582688" />
+
+
 
 ## XX/10/26 Notes (week X)
 
