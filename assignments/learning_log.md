@@ -93,6 +93,9 @@ void setRGB(int r, int g, int b){
 }
 ```
 
+## 27/10/26 Notes (week 3)
+
+hi
 
 ## XX/10/26 Notes (week X)
 
