@@ -171,7 +171,8 @@ void loop() {
   analogWrite(LED_PIN, brightness);
 }
 ```
-<img width="300" src="https://github.com/user-attachments/assets/a2d7e70f-a9ec-4109-b542-6ef89a582688" />
+<img width="300" src="https://github.com/user-attachments/assets/1346b10a-33dc-4174-b896-acbf7126ef4a" />
+
 
 Detecting light using a photo resistor:
 ```
