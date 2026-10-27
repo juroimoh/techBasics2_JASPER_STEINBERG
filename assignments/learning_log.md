@@ -114,7 +114,7 @@ void loop() {
   analogWrite(3, 0); // always off (0v)
 }
 ```
-
+  
 Blinking LED:  
 ```
 const int LED_PIN = 3; // ~ PWM pin (between power values 0-255)
@@ -129,8 +129,8 @@ void loop() {
   delay(300);
 }
 ```
-
-Fade in/out an LED:
+  
+Fade in/out an LED:  
 ```
 const int LED_PIN = 3;
 
@@ -150,8 +150,8 @@ void loop() {
   }
 }
 ```
-
-Fading an LED using a potentiometer:
+  
+Fading an LED using a potentiometer:  
 ```
 const int POT = A0;
 const int LED_PIN = 3;
@@ -171,15 +171,13 @@ void loop() {
   analogWrite(LED_PIN, brightness);
 }
 ```
-<img width="300" src="https://github.com/user-attachments/assets/1346b10a-33dc-4174-b896-acbf7126ef4a" />
-
-
-Detecting light using a photo resistor:
+<img width="300" src="https://github.com/user-attachments/assets/1346b10a-33dc-4174-b896-acbf7126ef4a" />  
+  
+Detecting light using a photo resistor:  
 ```
 // code is the same as above, simply reading from the same pins
 ```
-<img width="300" src="https://github.com/user-attachments/assets/a943fa89-b5cd-414e-a7e7-057a0ba600c3" />
-
+<img width="300" src="https://github.com/user-attachments/assets/a943fa89-b5cd-414e-a7e7-057a0ba600c3" />  
 
 ## XX/10/26 Notes (week X)
 
