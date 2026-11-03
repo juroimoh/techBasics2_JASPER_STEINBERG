@@ -317,21 +317,26 @@ void loop() {
   Serial.print(" ");
   Serial.println(state3);
   
+  if (state1 == 1 && state2 == 1 && state3 == 1){ // IF NO BUTTON IS PRESSED, STOP PLAYING
+    noTone(buzzerPin);
+  }
+
   if (state1 == 0) {
-    tone(buzzerPin, 200, 300);
+    tone(buzzerPin, 200);
   }
 
   if (state2 == 0) {
-    tone(buzzerPin, 300, 300);
+    tone(buzzerPin, 300);
   }
 
   if (state3 == 0) {
-    tone(buzzerPin, 400, 300);
+    tone(buzzerPin, 400);
   }
 }
 ```
 <img width="500" src="https://github.com/user-attachments/assets/a887ccdd-e999-4269-9653-a523d55e1f26" />
 
+This week was very fun, learning to control the output of the program with an input, and learning to play music. I still struggle with adapting the code to fit the task without help, and setting up my own circuit without heavily relying on my own pictured examples and the picture from the slides.  
 
 ## XX/10/26 Notes (week X)
 
