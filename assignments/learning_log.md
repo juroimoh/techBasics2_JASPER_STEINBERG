@@ -281,7 +281,7 @@ void loop() {
   Serial.println(state);
 }
 ```
-<img width="300" src="https://github.com/user-attachments/assets/a567cee2-4651-4560-a8e4-3a036ff44d69" />  
+<img width="500" src="https://github.com/user-attachments/assets/a567cee2-4651-4560-a8e4-3a036ff44d69" />  
 
 To swap the 1 and 0 output, swap the breadboard positions of green and yellow (input and output nodes?).  
 
@@ -330,7 +330,7 @@ void loop() {
   }
 }
 ```
-<img width="300" src="https://github.com/user-attachments/assets/a887ccdd-e999-4269-9653-a523d55e1f26" />
+<img width="500" src="https://github.com/user-attachments/assets/a887ccdd-e999-4269-9653-a523d55e1f26" />
 
 
 ## XX/10/26 Notes (week X)
