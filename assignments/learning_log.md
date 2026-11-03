@@ -281,11 +281,57 @@ void loop() {
   Serial.println(state);
 }
 ```
-<img width="300" src="https://github.com/user-attachments/assets/a567cee2-4651-4560-a8e4-3a036ff44d69" />  
+<img height="500" src="https://github.com/user-attachments/assets/a567cee2-4651-4560-a8e4-3a036ff44d69" />  
 
 To swap the 1 and 0 output, swap the breadboard positions of green and yellow (input and output nodes?).  
 
-hi
+A mini instrument, with 3 buttons and 3 pitches:
+```
+const int buttonPin1 = 2;
+const int buttonPin2 = 4;
+const int buttonPin3 = 12;
+
+const int buzzerPin = 8;
+
+int state1 = 0;
+int state2 = 0;
+int state3 = 0;
+
+void setup() {
+  pinMode(buttonPin1, INPUT_PULLUP);
+  pinMode(buttonPin2, INPUT_PULLUP);
+  pinMode(buttonPin3, INPUT_PULLUP);
+  
+  Serial.begin(9600);
+}
+
+void loop() {
+  state1 = digitalRead(buttonPin1);
+  state2 = digitalRead(buttonPin2);
+  state3 = digitalRead(buttonPin3);
+
+  Serial.print("Button: ");
+  Serial.print(state1);
+  Serial.print(" ");
+  Serial.print(state2);
+  Serial.print(" ");
+  Serial.println(state3);
+  
+  if (state1 == 0) {
+    tone(buzzerPin, 200, 300);
+  }
+
+  if (state2 == 0) {
+    tone(buzzerPin, 300, 300);
+  }
+
+  if (state3 == 0) {
+    tone(buzzerPin, 400, 300);
+  }
+}
+```
+<img height="500" src="https://github.com/user-attachments/assets/a887ccdd-e999-4269-9653-a523d55e1f26" />
+
 
 ## XX/10/26 Notes (week X)
 
