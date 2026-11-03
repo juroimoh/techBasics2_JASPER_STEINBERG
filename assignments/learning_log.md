@@ -257,13 +257,14 @@ void loop() {
 
   if (distance < 30) { // THIS PART PLAYS A SOUND IF THE DISTANCE IS LESS THAN 30
     digitalWrite(soundPin, HIGH);
-  } else { (distance > 30) {
+  } else { (distance > 30); {
     digitalWrite(soundPin, LOW);
-  }
+  }} // Not sure if this is correct, but this gets rid of any error messages.
   delay(500);
 }
 ```
 <img width="300" src="https://github.com/user-attachments/assets/6a141c4a-24a9-4259-8159-a2a2f2843607" />  
+^^ there should be an image here  
 
 hi
 
