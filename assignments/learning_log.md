@@ -263,7 +263,9 @@ void loop() {
   delay(500);
 }
 ```
-<img width="300" src="https://github.com/user-attachments/assets/6a141c4a-24a9-4259-8159-a2a2f2843607" />
+<img width="300" src="https://github.com/user-attachments/assets/6a141c4a-24a9-4259-8159-a2a2f2843607" />  
+
+hi
 
 ## XX/10/26 Notes (week X)
 
