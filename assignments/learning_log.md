@@ -176,6 +176,10 @@ void loop() {
 Detecting light using a photoresistor using the same code as above (we detect using the same pins):  
 <img width="300" src="https://github.com/user-attachments/assets/a943fa89-b5cd-414e-a7e7-057a0ba600c3" />  
 
+## 03/11/26 Notes (week 4)
+
+hi
+
 ## XX/10/26 Notes (week X)
 
 scientists reveal the hi
