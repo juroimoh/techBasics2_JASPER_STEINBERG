@@ -282,6 +282,7 @@ void loop() {
 }
 ```
 <img width="300" src="https://github.com/user-attachments/assets/a567cee2-4651-4560-a8e4-3a036ff44d69" />  
+To swap the 1 and 0 output, swap the breadboard positions of green and yellow (input and output nodes?).
 
 hi
 
