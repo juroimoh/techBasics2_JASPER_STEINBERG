@@ -264,7 +264,6 @@ void loop() {
 }
 ```
 <img width="300" src="https://github.com/user-attachments/assets/6a141c4a-24a9-4259-8159-a2a2f2843607" />  
-^^ there should be an image here  
 
 hi
 
