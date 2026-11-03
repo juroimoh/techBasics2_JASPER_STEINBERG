@@ -139,12 +139,12 @@ void setup() {
 }
 
 void loop() {
-  for (int i=0; i <= 255; i += 5) { // (START; END; STEP)
+  for (int i = 0; i <= 255; i += 5) { // (START; END; STEP)
     analogWrite(LED_PIN, i);
     delay(15);
   }
 
-  for (int i=255; i >= 0; i -= 5) {
+  for (int i = 255; i >= 0; i -= 5) {
     analogWrite(LED_PIN, i);
     delay(15);
   }
