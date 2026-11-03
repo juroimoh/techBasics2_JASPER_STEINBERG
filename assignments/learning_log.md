@@ -178,7 +178,92 @@ Detecting light using a photoresistor using the same code as above (we detect us
 
 ## 03/11/26 Notes (week 4)
 
-hi
+Introduction to sound!
+
+**Active Buzzer:** Produces sound directly when connectefd to power (built in oscillator, defined pitch).  
+**Passive Buzzer:** Requires a signal in order to make a sound.  
+
+Basic sound on a passive buzzer:
+```
+const int buzzerPin = 8;
+
+void setup() {
+  pinMode(buzzerPin, OUTPUT);
+  tone(buzzerPin, 200, 1000); // tone(pin, frequency, duration)
+}
+
+void loop() {
+}
+```
+
+Input pitch on a passive buzzer:
+```
+const int buzzerPin = 8;
+int input = 0;
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(buzzerPin, OUTPUT);
+  delay(1000);
+  Serial.println("Enter the pitch you want to play:");
+}
+
+void loop() {
+  if (Serial.available() > 0) {
+    input = Serial.parseInt();
+    Serial.println(input);
+    tone(buzzerPin, input, 500);
+  }
+}
+```
+
+Repo for ultrasonic sensor: https://github.com/cqx931/techBasics2_2026/blob/main/week4/3_ultrasonic/3_ultrasonic.ino  
+
+Detecting a close object = play sound:
+```
+const int trigPin = 9;
+const int echoPin = 10;
+const int soundPin = 2;
+
+long duration;
+int distance;
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+  pinMode(soundPin, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+
+  duration = pulseIn(echoPin, HIGH);
+
+  Serial.print("Duration ");
+  Serial.print(duration);
+  Serial.print(" microseconds | ");
+
+  distance = duration * 0.034 / 2; // Speed of sound wave divided by 2 (go and back)
+
+  Serial.print("Distance: ");
+  Serial.print(distance);
+  Serial.println(" cm");
+
+  if (distance < 30) { // THIS PART PLAYS A SOUND IF THE DISTANCE IS LESS THAN 30
+    digitalWrite(soundPin, HIGH);
+  } else { (distance > 30) {
+    digitalWrite(soundPin, LOW);
+  }
+  delay(500);
+}
+```
+<img width="300" src="https://github.com/user-attachments/assets/6a141c4a-24a9-4259-8159-a2a2f2843607" />
 
 ## XX/10/26 Notes (week X)
 
