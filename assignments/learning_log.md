@@ -265,6 +265,24 @@ void loop() {
 ```
 <img width="300" src="https://github.com/user-attachments/assets/6a141c4a-24a9-4259-8159-a2a2f2843607" />  
 
+Detecting a button press:
+```
+const int buttonPin = 2;
+int state = 0;
+
+void setup() {
+  pinMode(buttonPin, INPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  state = digitalRead(buttonPin);
+  Serial.print("Button:");
+  Serial.println(state);
+}
+```
+<img width="300" src="https://github.com/user-attachments/assets/a567cee2-4651-4560-a8e4-3a036ff44d69" />  
+
 hi
 
 ## XX/10/26 Notes (week X)
