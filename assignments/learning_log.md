@@ -340,7 +340,11 @@ This week was very fun, learning to control the output of the program with an in
 
 ## 10/11/26 Notes (week 5)
 
-hi
+Today we begin learning about movement.  
+
+Servo Motor:
+<img height="300" alt="image" src="https://github.com/user-attachments/assets/2c255f8b-b6a7-4aa1-b79d-10a10282dcb8" />
+
 
 ## XX/11/26 Notes (week X)
 
