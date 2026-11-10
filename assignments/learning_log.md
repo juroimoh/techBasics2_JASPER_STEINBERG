@@ -439,7 +439,7 @@ void loop() {
 <img height="200" src="https://github.com/user-attachments/assets/6339c8f5-ace7-4a76-8eec-befa95e0c6e2" /> <img height="200" src="https://github.com/user-attachments/assets/c02259eb-3679-4d70-a4e2-9559ae9508b5" />  
 ^ Setup and expected output (state `1` = joystick button not pressed)  
 
-A DOUBLE-SERVO controller using the Joystick:
+‼️ A **double-servo** controller using the Joystick ‼️
 ```
 #include <Servo.h>
 Servo myservo;
@@ -478,7 +478,10 @@ void loop() {
   myservo2.write(positionY);
 }
 ```
-<img width="500" src="https://github.com/user-attachments/assets/3550d14a-edf6-4e24-9319-f083478f05b9" />  
+<img width="500" src="https://github.com/user-attachments/assets/3550d14a-edf6-4e24-9319-f083478f05b9" />  <img height="300" src="https://github.com/user-attachments/assets/9a09fbc1-5477-4805-a365-c4333ff386fe" />
+
+
+
 
 
 
