@@ -343,7 +343,7 @@ This week was very fun, learning to control the output of the program with an in
 Today we begin learning about movement.  
 
 Servo Motor:  
-<img height="300" alt="image" src="https://github.com/user-attachments/assets/2c255f8b-b6a7-4aa1-b79d-10a10282dcb8" />
+<img height="300" src="https://github.com/user-attachments/assets/2c255f8b-b6a7-4aa1-b79d-10a10282dcb8" />
 
 Basic servo motor control:
 ```
@@ -405,7 +405,7 @@ void loop() {
   myservo.write(position);
 }
 ```
-<img width="300" alt="IMG_7447" src="https://github.com/user-attachments/assets/bb2e3a1b-a982-4b83-bea3-f1eb24c45123" />
+<img width="300" src="https://github.com/user-attachments/assets/bb2e3a1b-a982-4b83-bea3-f1eb24c45123" />
 
 Read a Joystick output:
 ```
@@ -436,7 +436,7 @@ void loop() {
   Serial.println(state);
 }
 ```
-<img width="300" alt="image" src="https://github.com/user-attachments/assets/6339c8f5-ace7-4a76-8eec-befa95e0c6e2" /> <img width="300" alt="image" src="https://github.com/user-attachments/assets/c02259eb-3679-4d70-a4e2-9559ae9508b5" />
+<img height="200" src="https://github.com/user-attachments/assets/6339c8f5-ace7-4a76-8eec-befa95e0c6e2" /> <img height="200" src="https://github.com/user-attachments/assets/c02259eb-3679-4d70-a4e2-9559ae9508b5" />  
 ^ Setup and expected output (state `1` = joystick button not pressed)  
 
 
