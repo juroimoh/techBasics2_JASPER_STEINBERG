@@ -439,6 +439,47 @@ void loop() {
 <img height="200" src="https://github.com/user-attachments/assets/6339c8f5-ace7-4a76-8eec-befa95e0c6e2" /> <img height="200" src="https://github.com/user-attachments/assets/c02259eb-3679-4d70-a4e2-9559ae9508b5" />  
 ^ Setup and expected output (state `1` = joystick button not pressed)  
 
+A DOUBLE-SERVO controller using the Joystick:
+```
+#include <Servo.h>
+Servo myservo;
+Servo myservo2;
+
+const int X = A0;
+const int Y = A1;
+const int pin2 = 2;
+
+int state = 0;
+int readingX = 0;
+int readingY = 0;
+int positionX = 0;
+int positionY = 0;
+
+void setup() {
+  pinMode(X, INPUT);
+  pinMode(Y, INPUT);
+  myservo.attach(9);
+  myservo2.attach(11);
+  Serial.begin(9600);
+}
+
+void loop() {
+  state = digitalRead(pin2);
+  readingX = analogRead(X);
+  readingY = analogRead(Y);
+  Serial.print("Reading: ");
+  Serial.print(readingX);
+  Serial.print(" | ");
+  Serial.println(readingY);
+
+  positionX = map(readingX, 0, 1023, 0, 180);
+  positionY = map(readingY, 0, 1023, 0, 180);
+  myservo.write(positionX);
+  myservo2.write(positionY);
+}
+```
+<img width="500" src="https://github.com/user-attachments/assets/3550d14a-edf6-4e24-9319-f083478f05b9" />  
+
 
 
 ## XX/11/26 Notes (week X)
