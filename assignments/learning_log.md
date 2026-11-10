@@ -382,7 +382,30 @@ void loop () {
 }
 ```
 
+Control Servo using a potentiometer:
+```
+#include <Servo.h>
+Servo myservo;
+const int POT = A0;
+int position = 0;
+int reading = 0;
 
+
+void setup() {
+  pinMode(POT, INPUT);
+  myservo.attach(9);
+  Serial.begin(9600);
+}
+
+void loop() {
+  reading = analogRead(POT);
+  Serial.print("Potentiometer: ");
+  Serial.println(reading);
+  position = map(reading, 0, 1023, 0, 180);
+  myservo.write(position);
+}
+```
+<img width="300" alt="IMG_7447" src="https://github.com/user-attachments/assets/bb2e3a1b-a982-4b83-bea3-f1eb24c45123" />
 
 ## XX/11/26 Notes (week X)
 
