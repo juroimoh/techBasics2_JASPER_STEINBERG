@@ -479,7 +479,7 @@ void loop() {
 }
 ```
 <img width="500" src="https://github.com/user-attachments/assets/3550d14a-edf6-4e24-9319-f083478f05b9" />  <img height="300" src="https://github.com/user-attachments/assets/9a09fbc1-5477-4805-a365-c4333ff386fe" />  
-* code and setup may vary from the slides  
+`*` code and setup may vary from the slides  
 
 
 
