@@ -338,6 +338,10 @@ void loop() {
 
 This week was very fun, learning to control the output of the program with an input, and learning to play music. I still struggle with adapting the code to fit the task without help, and setting up my own circuit without heavily relying on my own pictured examples and the picture from the slides.  
 
-## XX/10/26 Notes (week X)
+## 10/11/26 Notes (week 5)
+
+hi
+
+## XX/11/26 Notes (week X)
 
 scientists reveal the hi
