@@ -407,6 +407,40 @@ void loop() {
 ```
 <img width="300" alt="IMG_7447" src="https://github.com/user-attachments/assets/bb2e3a1b-a982-4b83-bea3-f1eb24c45123" />
 
+Read a Joystick output:
+```
+const int X = A0;
+const int Y = A1;
+const int pin2 = 2;
+
+int state = 0;
+int readingX = 0;
+int readingY = 0;
+
+void setup() {
+  pinMode(X, INPUT);
+  pinMode(Y, INPUT);
+  pinMode(pin2, INPUT_PULLUP);
+  Serial.begin(9600);
+}
+
+void loop() {
+  state = digitalRead(pin2);
+  readingX = analogRead(X);
+  readingY = analogRead(Y);
+  Serial.print("Reading: ");
+  Serial.print(readingX);
+  Serial.print(" | ");
+  Serial.print(readingY);
+  Serial.print(", State: ");
+  Serial.println(state);
+}
+```
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/6339c8f5-ace7-4a76-8eec-befa95e0c6e2" /> <img width="300" alt="image" src="https://github.com/user-attachments/assets/c02259eb-3679-4d70-a4e2-9559ae9508b5" />
+^ Setup and expected output (state `1` = joystick button not pressed)  
+
+
+
 ## XX/11/26 Notes (week X)
 
 scientists reveal the hi
