@@ -342,8 +342,46 @@ This week was very fun, learning to control the output of the program with an in
 
 Today we begin learning about movement.  
 
-Servo Motor:
+Servo Motor:  
 <img height="300" alt="image" src="https://github.com/user-attachments/assets/2c255f8b-b6a7-4aa1-b79d-10a10282dcb8" />
+
+Basic servo motor control:
+```
+`#include <Servo.h>
+Servo myservo;
+
+void setup() {
+  myservo.attach(9);
+}
+
+void loop () {
+  myservo.write(0);
+  delay(2000);
+  myservo.write(180);
+  delay(2000);
+}
+```
+
+Beginning the void loop code with `myservo.write(0);` ensures the motor always begins at the correct position.  
+
+Changing speeds:  
+```
+#include <Servo.h>
+Servo myservo;
+
+void setup() {
+  myservo.attach(9);
+}
+
+void loop () {
+  for (int i=0; i <= 180; i += 1) {
+      myservo.write(i);
+      delay(10);
+  }
+  myservo.write(0);
+}
+```
+
 
 
 ## XX/11/26 Notes (week X)
