@@ -481,12 +481,16 @@ void loop() {
 <img width="500" src="https://github.com/user-attachments/assets/3550d14a-edf6-4e24-9319-f083478f05b9" />  <img height="300" src="https://github.com/user-attachments/assets/9a09fbc1-5477-4805-a365-c4333ff386fe" />  
 `*` code and setup may vary from the slides  
 
-So far this is my favorite lesson, seeing live feedback from the controller translate to movement in real life. I'm also glad the code above worked as intended.
+So far this is my favorite lesson, seeing live feedback from the controller translate to movement in real life. I'm also glad the code above worked as intended.  
 
-## 17/11/26 Notes (week 6)
+## 17/11/26 Notes (week 6)  
 
-Stepper motors are very precise (~4000 steps for 360°), with large torque at low speeds.
-- You need to use it with a marching driver & different stepper motors have different specs → different code.
+Stepper motors are very precise (~4000 steps for 360°), with large torque at low speeds.  
+- You need to use it with a marching driver & different stepper motors have different specs → different code.  
+
+Code: [Basic Move Degrees](https://github.com/cqx931/techBasics2_2026/blob/main/week6/1_stepper_moveDegrees/1_stepper_moveDegrees.ino)
+<img width="500" src="https://github.com/user-attachments/assets/e1570cc5-a513-4f06-b489-95d7d7838215" />
+`*` power supply not included in the picture
 
 
 
