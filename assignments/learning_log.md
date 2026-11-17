@@ -524,8 +524,8 @@ void loop() {
 }
 ```
 `*` may or may not be correct, but it works  
-<img width="500" alt="image" src="https://github.com/user-attachments/assets/77460d51-71e7-4bbc-a546-141626858892" />
-more efficient code segment for above:  
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/77460d51-71e7-4bbc-a546-141626858892" />  
+More efficient code segment for above:  
 ```
   if (digitalRead(2) == 0) {
     stepper.run();
@@ -533,7 +533,7 @@ more efficient code segment for above:
     stepper.stop();
 ```
 
-Control movement with 2 LED indicators:
+Control movement with 2 LED indicators:  
 ```
 #include <CheapStepper.h>
 const int touch = 2;
@@ -583,6 +583,10 @@ void loop() {
 }
 ```
 No photo for this.  
+
+
+
+
 
 ## XX/11/26 Notes (week X)
 
