@@ -533,8 +533,56 @@ more efficient code segment for above:
     stepper.stop();
 ```
 
+Control movement with 2 LED indicators:
+```
+#include <CheapStepper.h>
+const int touch = 2;
+int state = 0;
 
+const int redLED = 5;
+const int greenLED = 6;
 
+CheapStepper stepper (8,9,10,11);
+const int stepsPerRevolution = 4096;
+bool moveClockwise = true;
+int stepsLeft = 0;
+
+void setup()
+{
+  pinMode(touch, INPUT);
+  pinMode(redLED, OUTPUT);
+  pinMode(greenLED, OUTPUT);
+  Serial.begin(9600);
+  stepper.setRpm(6);
+  stepper.setTotalSteps(stepsPerRevolution); 
+}
+
+void loop() {
+  state = digitalRead(touch);
+
+  if (state == 1){
+    stepper.stop();
+    digitalWrite(redLED, 0);
+    digitalWrite(greenLED, 0);
+  } else {
+    stepper.run();
+    if (moveClockwise) {
+      digitalWrite(redLED, LOW);
+      digitalWrite(greenLED, HIGH);
+    } else {
+      digitalWrite(redLED, HIGH);
+      digitalWrite(greenLED, LOW);
+    }
+  }
+
+  stepsLeft = stepper.getStepsLeft();
+  if (stepsLeft == 0){
+    moveClockwise = !moveClockwise;
+    stepper.newMoveDegrees(moveClockwise, 120);
+  } 
+}
+```
+No photo for this.  
 
 ## XX/11/26 Notes (week X)
 
