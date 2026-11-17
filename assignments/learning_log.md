@@ -492,6 +492,38 @@ Code: [Basic Move Degrees](https://github.com/cqx931/techBasics2_2026/blob/main/
 <img width="500" src="https://github.com/user-attachments/assets/e1570cc5-a513-4f06-b489-95d7d7838215" />
 `*` power supply not included in the picture
 
+Pausing step motor with touch sensor:
+```
+#include <CheapStepper.h>
+const int touch = 2;
+int state = 0;
+
+CheapStepper stepper (8,9,10,11);
+const int stepsPerRevolution = 4096;
+bool moveClockwise = true;
+int stepsLeft = 0; // how many steps are left from the current movement
+
+void setup()
+{
+  pinMode(touch, INPUT);
+  Serial.begin(9600);
+  stepper.setRpm(6);  // The default is ~16.25rpm
+  stepper.setTotalSteps(stepsPerRevolution); 
+}
+
+void loop() {
+  stepper.run();
+  stepsLeft = stepper.getStepsLeft();
+  if (stepsLeft == 0){
+    stepper.newMoveDegrees(moveClockwise, stepsPerRevolution/3); // move 120 degrees from current position
+  }
+  state = digitalRead(touch);
+  if (state == 1){
+    stepper.stop();
+  }
+}
+```
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/77460d51-71e7-4bbc-a546-141626858892" />
 
 
 
