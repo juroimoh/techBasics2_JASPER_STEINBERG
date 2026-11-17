@@ -525,6 +525,13 @@ void loop() {
 ```
 `*` may or may not be correct, but it works  
 <img width="500" alt="image" src="https://github.com/user-attachments/assets/77460d51-71e7-4bbc-a546-141626858892" />
+more efficient code segment for above:  
+```
+  if (digitalRead(2) == 0) {
+    stepper.run();
+  } else {
+    stepper.stop();
+```
 
 
 
