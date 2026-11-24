@@ -620,7 +620,31 @@ void loop() {
 ```
 <img width="500" alt="IMG_7487" src="https://github.com/user-attachments/assets/ff4f0424-4178-4eb0-9705-d92944ab1d5b" />
 
- 
+Controlling a DC motor with a potentiometer:
+```
+const int motor = 3;
+const int pot = A0;
+int reading = 0;
+int speed = 0;
+
+void setup() {
+  pinMode (motor, OUTPUT);
+  pinMode(pot, INPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  reading = analogRead(pot);
+  Serial.print("Potentiometer: ");
+  speed = map(reading, 0, 1023, 0, 255);
+  Serial.print(reading);
+  analogWrite(motor, speed);
+  Serial.print(" | Speed: ");
+  Serial.println(speed);
+}
+```
+<img width="500" src="https://github.com/user-attachments/assets/5b156a3e-5e3b-4f00-9e80-dc2d27d43a62" />
+
 
 
 
