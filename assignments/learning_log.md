@@ -692,7 +692,6 @@ void loop() {
   
   previousbutton = currentbutton;
 }
-
 ```
 <img width="400" src="https://github.com/user-attachments/assets/4999269d-c259-4a2c-8ce7-543adac232cd" />  
 
