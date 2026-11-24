@@ -584,6 +584,17 @@ void loop() {
 ```
 No photo for this.  
 
+## 24/11/26 Notes (week 7)
+
+Today we continue movement with servo motors, stepper motors, and DC Motors.  
+
+Motor Comparison:  
+|  | Servos | Stepper Motors | DC Motors |
+| --- | --- | --- | --- |
+| Control System | no feedback | high precision | precise control |
+| Speed and Torque | high torque at low speeds | good at dynamic tasks with speed changes | high speed |
+| Applications | low speed, high precision tasks | dynamic, high performance tasks | high speed applications | 
+
 
 
 
