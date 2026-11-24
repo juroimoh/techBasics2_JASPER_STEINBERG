@@ -488,8 +488,9 @@ So far this is my favorite lesson, seeing live feedback from the controller tran
 Stepper motors are very precise (~4000 steps for 360°), with large torque at low speeds.  
 - You need to use it with a marching driver & different stepper motors have different specs → different code.  
 
-Code: [Basic Move Degrees](https://github.com/cqx931/techBasics2_2026/blob/main/week6/1_stepper_moveDegrees/1_stepper_moveDegrees.ino)
-<img width="500" src="https://github.com/user-attachments/assets/e1570cc5-a513-4f06-b489-95d7d7838215" />
+Code: [Basic Move Degrees](https://github.com/cqx931/techBasics2_2026/blob/main/week6/1_stepper_moveDegrees/1_stepper_moveDegrees.ino)  
+<img width="500" src="https://github.com/user-attachments/assets/e1570cc5-a513-4f06-b489-95d7d7838215" />  
+
 `*` power supply not included in the picture
 
 Pausing step motor with touch sensor:
@@ -525,6 +526,7 @@ void loop() {
 ```
 `*` may or may not be correct, but it works  
 <img width="500" alt="image" src="https://github.com/user-attachments/assets/77460d51-71e7-4bbc-a546-141626858892" />  
+
 More efficient code segment for above:  
 ```
   if (digitalRead(2) == 0) {
