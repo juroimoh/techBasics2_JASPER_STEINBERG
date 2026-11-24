@@ -618,7 +618,7 @@ void loop() {
   analogWrite(motor,255);
 }
 ```
-<img width="500" alt="IMG_7487" src="https://github.com/user-attachments/assets/ff4f0424-4178-4eb0-9705-d92944ab1d5b" />
+<img width="400" alt="IMG_7487" src="https://github.com/user-attachments/assets/ff4f0424-4178-4eb0-9705-d92944ab1d5b" />
 
 Controlling a DC motor with a potentiometer:
 ```
@@ -643,7 +643,56 @@ void loop() {
   Serial.println(speed);
 }
 ```
-<img width="500" src="https://github.com/user-attachments/assets/5b156a3e-5e3b-4f00-9e80-dc2d27d43a62" />
+<img width="400" src="https://github.com/user-attachments/assets/5b156a3e-5e3b-4f00-9e80-dc2d27d43a62" />
+
+Power on or off the DC motor controlled with a potentiometer using a button toggle:  
+```
+const int motor = 3;
+const int pot = A0;
+const int button = 7;
+
+int reading = 0;
+int speed = 0;
+int currentbutton = 0;
+int previousbutton = 0;
+
+bool toggle = true;
+
+void setup() {
+  pinMode (motor, OUTPUT);
+  pinMode(pot, INPUT);
+  pinMode(button, INPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  reading = analogRead(pot);
+  currentbutton = digitalRead(button);
+
+  if (previousbutton == 0 && currentbutton == 1) {
+    toggle = !toggle;
+  }
+  
+  if (toggle) {
+    speed = map(reading, 0, 1023, 0, 255);
+    analogWrite(motor, speed);
+  } else {
+    digitalWrite(motor, LOW);
+    speed = 0;
+  }
+  
+  Serial.print("Potentiometer: ");
+  Serial.print(reading);
+  Serial.print(" | Speed: ");
+  Serial.print(speed);
+  Serial.print(" | Button: ");
+  Serial.println(currentbutton);
+  
+  previousbutton = currentbutton;
+}
+
+```
+<img width="400" src="https://github.com/user-attachments/assets/4999269d-c259-4a2c-8ce7-543adac232cd" />  
 
 
 
