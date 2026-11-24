@@ -595,6 +595,14 @@ Motor Comparison:
 | Speed and Torque | high torque at low speeds | good at dynamic tasks with speed changes | high speed |
 | Applications | low speed, high precision tasks | dynamic, high performance tasks | high speed applications | 
 
+The **front** of a transistor is usually considered the flat side.  
+Transistors are used to switch or amplify electrical signals and power.  
+
+<img width="300" src="https://github.com/user-attachments/assets/ccc49754-68ae-4fee-b41c-899e287394d2" />  
+**Collector (C)** collects the majority of the charge carriers that are emitted from the emitter.  
+**Base (B)**This is the control terminal. A small current or voltage at the base can control a larger current flow between the collector and emitter.  
+**Emitter (E)** emits the charge carriers (electrons in an NPN transistor) into the base.  
+
 
 
 
