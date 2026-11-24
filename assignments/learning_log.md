@@ -604,7 +604,23 @@ Transistors are used to switch or amplify electrical signals and power.
 **Base (B)**This is the control terminal. A small current or voltage at the base can control a larger current flow between the collector and emitter.  
 **Emitter (E)** emits the charge carriers (electrons in an NPN transistor) into the base.  
 
+Spinning DC motor:  
+```
+const int motor = 3;
 
+void setup() {
+  pinMode (motor, OUTPUT);
+}
+
+void loop() {
+  analogWrite(motor, 200);
+  delay(50);
+  analogWrite(motor,255);
+}
+```
+<img width="500" alt="IMG_7487" src="https://github.com/user-attachments/assets/ff4f0424-4178-4eb0-9705-d92944ab1d5b" />
+
+ 
 
 
 
